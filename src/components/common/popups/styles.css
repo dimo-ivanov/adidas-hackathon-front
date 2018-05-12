@@ -1,0 +1,29 @@
+.color-inherit {
+  color: inherit
+}
+
+.alert-template {
+  background-color: #fff;
+  color: #616363;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: #2526264f 0px 0px 5px 0px;
+  border-bottom: #c53622 3px solid;
+  font-family: "AdihausDINCnMedium", sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  margin: 30px
+}
+
+.alert-bttn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 5px 10px 4px;
+  cursor: pointer
+}

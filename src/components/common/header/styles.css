@@ -1,0 +1,26 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.menu-link {
+  border-bottom: #c53622 1px solid;
+  text-transform: uppercase;
+  font-family: 'AdihausDINCnMedium', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.2em;
+  color: #363738d6;
+  margin: 5px;
+}
+
+.user-menu {
+  position: absolute;
+  left: calc(100% - 132px);
+  z-index: 22;
+  background: white;
+  box-shadow: lightgrey 0px 0px 1px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

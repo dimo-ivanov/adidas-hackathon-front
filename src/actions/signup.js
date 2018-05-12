@@ -1,0 +1,6 @@
+export const signupTypes = {
+  SIGNUP: 'signup/SIGNUP',
+  RESET_PASSWORD: 'signup/RESET_PASSWORD',
+  RESET_PASSWORD_SUCCESS: "signup/RESET_PASSWORD_SUCCESS",
+  RESET_PASSWORD_FAIL: "signup/RESET_PASSWORD_FAIL"
+}

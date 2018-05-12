@@ -1,0 +1,25 @@
+.dashboard-hey.email-invite .hey-popup-button-cont{
+  background-color: white;
+  justify-content: center;
+}
+
+.dashboard-hey.email-invite input{
+  width: 90%;
+  background: transparent;
+  border: 0;
+  padding: 20px 10px 5px 10px;
+  margin: 0;
+  color: #9a9b9b;
+  font-size: 0.76em;
+  background: #ebebeb;
+  margin: 10px 0px;
+  outline: none;
+}
+
+
+.dashboard-hey.email-invite .hey-popup-content{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
