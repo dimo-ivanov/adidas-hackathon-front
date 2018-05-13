@@ -50,7 +50,7 @@ export const listenerEpic = (action$) => {
 }
 
 export const senderEpic = (action$) => {
-  return action$.ofType(socketTypes.SEND_MSG)
+  return action$.ofType(socketTypes.CREATE_MINIEVENT)
     .switchMap(({ data }) => {
       return Observable.create(obs => {
         socket.emit(events.MESSAGE, { ...data })
