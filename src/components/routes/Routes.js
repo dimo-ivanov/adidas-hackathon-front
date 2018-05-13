@@ -5,8 +5,8 @@ import { Route, Switch } from 'react-router'
 // import PrivateRoute from './PrivateRoute'
 import { history } from '../../stores'
 import { routes } from '../../config/routes'
-import { Auth } from '../../helpers'
-import Header from '../common/header/Header'
+// import { Auth } from '../../helpers'
+// import Header from '../common/header/Header'
 // import LoginPage from '../users/LoginPage'
 import PopupSwitcher from '../common/popups/PopupSwitcher'
 // import { SignUp } from '../../screens'
@@ -17,7 +17,7 @@ import NotFound from './NotFound'
 const Routes = (props) => (
   <ConnectedRouter history={history}>
     <div className='dashboard-wrap'>
-      {(Auth.isUserAuthenticated() || props.isAuthenticated) && <Header />}
+      {/* {(Auth.isUserAuthenticated() || props.isAuthenticated) && <Header />} */}
       {props.loading && <Loader />}
 
       <Switch>
@@ -40,9 +40,9 @@ const Routes = (props) => (
 
 const mapStateToProps = (state) => {
   return {
-    loading: state.general.loading,
-    isAuthenticated: state.auth.isAuthenticated,
-    showPopup: Object.values(state.popup).indexOf(true) > -1
+    loading: state.general.loading
+    // isAuthenticated: state.auth.isAuthenticated,
+    // showPopup: Object.values(state.popup).indexOf(true) > -1
   }
 }
 
