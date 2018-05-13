@@ -2,7 +2,7 @@ import io from 'socket.io-client'
 import { Observable } from 'rxjs'
 import { socketTypes } from '../actions'
 import { socketUrl } from '../config/settings'
-import { Auth } from '../helpers'
+// import { Auth } from '../helpers'
 
 const events = {
   INIT: 'socket-init',
@@ -14,10 +14,10 @@ let socket
 
 export const connectEpic = (action$) => {
   return action$.ofType(socketTypes.CONNECT)
-    .switchMap(() => {
+    .switchMap((action) => {
       return Observable
         .create(obs => {
-          socket = io(socketUrl, { query: `participantId=${Auth.getParticipant()}` })
+          socket = io(socketUrl, { query: action.data })
           obs.next({ type: socketTypes.SUCCESS, socket })
           obs.complete()
         })

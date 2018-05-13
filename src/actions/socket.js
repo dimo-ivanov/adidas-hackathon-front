@@ -12,9 +12,10 @@ export const socketTypes = {
   REMOVED_FROM_TEAM: 'socket/REMOVED_FROM_TEAM'
 }
 
-export const socketConnect = () => (
+export const socketConnect = (data) => (
   {
-    type: socketTypes.CONNECT
+    type: socketTypes.CONNECT,
+    data
   }
 )
 

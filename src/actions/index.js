@@ -9,3 +9,5 @@ export * from './signup'
 export * from './invites'
 export * from './mentions'
 export * from './files'
+
+export * from './events'

@@ -60,7 +60,7 @@
 
 .loader {
     border: 6px solid white; /* Light grey */
-    border-top: 5px solid #c53622; /* Blue */
+    border-top: 5px solid #c5362200; /* Blue */
     border-radius: 50%;
     width: 40px;
     height: 40px;

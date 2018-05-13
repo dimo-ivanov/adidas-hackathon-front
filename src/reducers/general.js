@@ -1,4 +1,4 @@
-import { authTypes, generalTypes, socketTypes, teamTypes, participantTypes, inviteTypes } from '../actions'
+import { authTypes, generalTypes, socketTypes, teamTypes, participantTypes, inviteTypes, eventTypes } from '../actions'
 
 const initialState = {
   loading: false,
@@ -58,6 +58,10 @@ const general = (state = initialState, action) => {
     case inviteTypes.EMAIL_INVITE_FAIL:
       return { ...state, loading: false }
     case inviteTypes.EMAIL_INVITE_SUCCESS:
+      return { ...state, loading: false }
+    case eventTypes.GET:
+      return { ...state, loading: true }
+    case eventTypes.GET_RESPONSE:
       return { ...state, loading: false }
     default: return state
   }
