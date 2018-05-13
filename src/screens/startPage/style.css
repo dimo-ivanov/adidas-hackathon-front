@@ -13,21 +13,21 @@
 }
 .footballspace {
   background-color: rgba(255,255,255,0.0);
-  top: 50px;
+  top: 266px;
   height: 59px;
   width: 447px;
   position: absolute;
   margin: 0;
-  left: 354px;
+  left: 431px;
 }
 .bitmap {
   background-color: rgba(255,255,255,0.0);
-  top: 12px;
+  top: 215px;
   height: 125px;
   width: 199px;
   position: absolute;
   margin: 0;
-  left: 222px;
+  left: 311px;
 }
 
 .page1{width:100%;min-width:1024px;height:100vh;min-height:1024px;position:relative;overflow:hidden;margin:0;background-color:rgba(255,255,255,1.0)}
@@ -46,6 +46,78 @@ div{-webkit-text-size-adjust:none}
 .anima-animate-appear{opacity:0;display:block;-webkit-animation:anima-reveal .3s ease-in-out 1 normal forwards;-moz-animation:anima-reveal .3s ease-in 1 normal forwards;-o-animation:anima-reveal .3s ease-in-out 1 normal forwards;animation:anima-reveal .3s ease-in-out 1 normal forwards}
 .anima-animate-disappear{opacity:1;display:block;-webkit-animation:anima-reveal .3s ease-in-out 1 reverse forwards;-moz-animation:anima-reveal .3s ease-in 1 normal forwards;-o-animation:anima-reveal .3s ease-in-out 1 reverse forwards;animation:anima-reveal .3s ease-in-out 1 reverse forwards}
 .anima-animate-nodelay{-webkit-animation-delay:0;-moz-animation-delay:0;-o-animation-delay:0;animation-delay:0}
+.page2 .a6922901fernandotorreschelseawallpaper {
+    background-color: rgba(255,255,255,0.0);
+    top: -14px;
+    height: 1064px;
+    width: 1702px;
+    position: absolute;
+    margin: 0;
+    left: -642px;
+}
+.page2 .oval2 {
+    background-color: rgba(255,255,255,0.0);
+    top: 183px;
+    height: 134px;
+    width: 134px;
+    position: absolute;
+    margin: 0;
+    left: 597px;
+  }
+  .page2 .now-enter-your-guest {
+    background-color: rgba(255,255,255,0.0);
+    top: 345px;
+    height: 44px;
+    width: 435px;
+    position: absolute;
+    margin: 0;
+    left: 447px;
+}
+.page2 .rectangle2 {
+    background-color: rgba(255,255,255,0.0);
+    top: 389px;
+    height: 52px;
+    width: 417px;
+    position: absolute;
+    margin: 0;
+    left: 455px;
+}
+.page2 .group2 {
+    background-color: rgba(255,255,255,0.0);
+    top: 789px;
+    height: 82px;
+    width: 197px;
+    position: absolute;
+    margin: 0;
+    left: 566px;
+}
+.page2 .footballspace {
+    background-color: rgba(255,255,255,0.0);
+    top: 50px;
+    height: 59px;
+    width: 447px;
+    position: absolute;
+    margin: 0;
+    left: 354px;
+}
+.page2 .bitmap {
+    background-color: rgba(255,255,255,0.0);
+    top: 12px;
+    height: 125px;
+    width: 199px;
+    position: absolute;
+    margin: 0;
+    left: 222px;
+}
+.page2 .icons8home26 {
+    background-color: rgba(255,255,255,0.0);
+    top: 34px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 0;
+    left: 32px;
+}
 
 @-webkit-keyframes anima-reveal{0%{opacity:0}100%{opacity:1}}
 @-moz-keyframes anima-reveal{0%{opacity:0}100%{opacity:1}}
