@@ -6,7 +6,9 @@
 // import PlayerPage from './player/PlayerPage'
 
 import StartPage from './startPage/StartPage'
+import EventPage from './eventPage/EventPage'
 
 export {
-  StartPage
+  StartPage,
+  EventPage
 }

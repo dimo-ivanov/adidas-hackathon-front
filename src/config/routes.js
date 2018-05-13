@@ -1,8 +1,8 @@
 // import { Dashboard, ManageTeam, RegisterTeam, MyTeam, TeamPage, PlayerPage } from '../screens'
-import { StartPage } from '../screens'
+import { StartPage, EventPage } from '../screens'
 
-console.log('Hello Bate')
 export const routes = [
-  { path: '/', exact: true, component: StartPage }
+  { path: '/', exact: true, component: StartPage },
+  { path: '/event', exact: true, component: EventPage }
   // { path: '/page2', exact: true, component: JoinPage }
 ]

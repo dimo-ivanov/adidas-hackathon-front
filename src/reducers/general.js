@@ -3,7 +3,8 @@ import { authTypes, generalTypes, socketTypes, teamTypes, participantTypes, invi
 const initialState = {
   loading: false,
   counter: 0,
-  alert: ''
+  alert: '',
+  team: ''
 }
 
 const general = (state = initialState, action) => {
@@ -15,7 +16,7 @@ const general = (state = initialState, action) => {
     case authTypes.FAIL:
       return { ...state, loading: false }
     case socketTypes.CONNECT:
-      return { ...state, loading: true }
+      return { ...state, loading: true, team: action.data.team }
     case socketTypes.SUCCESS:
       return { ...state, loading: false }
     case socketTypes.NEW_NOTIF:
