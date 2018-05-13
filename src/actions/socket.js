@@ -10,7 +10,8 @@ export const socketTypes = {
   REMOVE_NOTIF: 'socket/REMOVE_NOTIFICATION',
   NOTIF_UPDATE: 'socket/NOTIFICATION_UPDATE',
   REMOVED_FROM_TEAM: 'socket/REMOVED_FROM_TEAM',
-  CREATE_EVENT: 'socket/CREATE_EVENT'
+  CREATE_MINIEVENT: 'socket/CREATE_MINIEVENT',
+  NEW_MINIEVENT: 'socket/NEW_MINIEVENT'
 }
 
 export const socketConnect = (data) => (
@@ -27,4 +28,9 @@ export const socketSendMessage = (data) => (
   }
 )
 
-export const 
+export const socketCreateEvent = (data) => (
+  {
+    type: socketTypes.CREATE_MINIEVENT,
+    data
+  }
+)
