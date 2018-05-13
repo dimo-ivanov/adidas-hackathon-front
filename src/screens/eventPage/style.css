@@ -110,3 +110,18 @@
     margin: 0;
     left: 0;
 }
+
+.table {
+  border: 2px solid white;
+  position: relative;
+  color: white;
+  top: 317px;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  justify-content: space-around;
+  text-align: center;
+}
