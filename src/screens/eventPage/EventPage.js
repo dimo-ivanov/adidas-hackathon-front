@@ -13,6 +13,7 @@ class EventPage extends Component {
     }
 
     this.createMinievent = this.createMinievent.bind(this)
+    this.handleLike = this.handleLike.bind(this)
   }
 
   createMinievent (startTime, text) {
@@ -25,6 +26,11 @@ class EventPage extends Component {
     }
 
     this.props.dispatch(socketCreateEvent({ action, data }))
+  }
+
+  handleLike (id) {
+    const action = 'like'
+    this.props.dispatch()
   }
 
   render () {
@@ -46,9 +52,17 @@ class EventPage extends Component {
         <div className='table'>
           {this.props.minievents.map(mini => (
             <div key={mini._id} className='line'>
-              <div style={{ flex: '10' }}>{mini.text}</div><div style={{ flex: '2' }}>{mini.likes} / {mini.dislikes}</div><div style={{ flex: '1' }}>{moment(mini.start).format('MM:ss')}</div>
+              <div style={{ flex: '10' }} className='event-name'>{mini.text}</div>
+              <img onClick={() => this.handleLike(mini._id)}alt='' className='icons8facebooklike50 like' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modeicons8facebooklike50.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modeicons8facebooklike50.png' />
+              <div style={{ flex: '1' }}>{mini.likes} / {mini.dislikes}</div>
+              <img className='icons8facebooklike501 dislike' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modeicons8facebooklike50.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modeicons8facebooklike50.png' />
+              <div style={{ flex: '1' }} className='timer'>{moment(mini.start).format('MM:ss')}</div>
             </div>
           ))}
+          <div className='bttn-container'>
+            <img className='plus pluss' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modeplus.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modeplus.png' />
+            <img className='group' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modegroup.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af7f57ebc4d3c000d6cc5a5/img/event modegroup.png' />
+          </div>
         </div>
 
         <button onClick={() => this.createMinievent(new Date(), 'Mexican wave')}>create event</button>

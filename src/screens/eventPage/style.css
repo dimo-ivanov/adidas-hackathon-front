@@ -116,6 +116,7 @@
   position: relative;
   color: white;
   top: 317px;
+  font-size: 30px;
 }
 
 .line {
@@ -124,4 +125,48 @@
   text-transform: uppercase;
   justify-content: space-around;
   text-align: center;
+  margin: 10px;
+}
+
+.event-name {
+  flex: 10 1 0%;
+  background: #ffffffe0;
+  padding: 10px;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.dislike {
+  transform: scale(-1);
+  margin-right: 70px;
+}
+
+.like {
+  margin-left: 70px;
+}
+
+.timer {
+  flex: 1 1 0%;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.bttn-container {
+  text-align: center;
+  background: #161717;
+  border-top: 1px solid white;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.pluss {
+  position: absolute;
+  height: 78px;
+}
+
+.tegav-img {
+  position: absolute;
+  left: 0px;
 }

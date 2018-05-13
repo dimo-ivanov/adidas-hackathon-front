@@ -67,17 +67,17 @@ class StartPage extends Component {
 
   renderPage2 () {
     return (
-      <div className="page2">
-      <img alt='' className='backgroundfootballhd8' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1backgroundfootballhd8.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1backgroundfootballhd8.png' />
-      <img alt='' className='rectangle4' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 4.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 4.png' />
-      <img alt='' className='footballspace' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1footballspace.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1footballspace.png' />
-      <img alt='' className='bitmap' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1bitmap.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1bitmap.png' />
+      <div className='page2'>
+        <img alt='' className='backgroundfootballhd8 tegav-img' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1backgroundfootballhd8.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1backgroundfootballhd8.png' />
+        <img alt='' className='rectangle4' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 4.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 4.png' />
+        <img alt='' className='footballspace' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1footballspace.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1footballspace.png' />
+        <img alt='' className='bitmap' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1bitmap.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1bitmap.png' />
         <form onSubmit={this.handleSubmit} name='form'>
-          <select className="chooseTeam" onChange={ev => this.setState({ team: ev.target.value })}>
+          <select className='chooseTeam' onChange={ev => this.setState({ team: ev.target.value })}>
             <option value='homeTeam'>{this.props.event.homeTeam}</option>
             <option value='guestTeam'>{this.props.event.guestTeam}</option>
           </select>
-          <input className="joinButton" type='submit' value='Join Team' />
+          <input className='joinButton' type='submit' value='Join Team' />
         </form>
       </div>
     )
