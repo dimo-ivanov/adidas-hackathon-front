@@ -7,6 +7,8 @@ import * as general from './general'
 import { signUpEpic, resetPasswordEpic, navigateAfterReset } from './signup'
 import { inviteEmailEpic } from './invites'
 
+import * as events from './events'
+
 export const rootEpic = combineEpics(
   auth.attemptEpic, auth.responseEpic, auth.failEpic, auth.syncEpic, auth.syncResEpic,
   socket.connectEpic, socket.initListenerEpic, socket.listenerEpic, socket.senderEpic,
@@ -18,5 +20,6 @@ export const rootEpic = combineEpics(
   signUpEpic,
   resetPasswordEpic,
   navigateAfterReset,
-  inviteEmailEpic
+  inviteEmailEpic,
+  events.getEventEpic, events.getEventResEpic
 )

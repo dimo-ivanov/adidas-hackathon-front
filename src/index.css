@@ -5,4 +5,5 @@ textarea:focus, input:focus{
 body{
   margin: 0;
   background: rgba(255, 255, 255, 1.0);
+  font-family: sans-serif;
 }

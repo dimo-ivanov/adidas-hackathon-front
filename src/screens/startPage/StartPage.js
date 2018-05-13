@@ -1,32 +1,50 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './style.css'
+import { getEvent, socketConnect } from '../../actions'
 
 class StartPage extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      eventCode: '',
+      eventCode: '5432',
+      team: 'homeTeam',
       page: 1
     }
 
+    this.handleContunue = this.handleContunue.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit () {
-    this.state.eventCode !== '' && this.setState({ page: 2 })
+  handleContunue () {
+    this.state.eventCode !== '' && this.props.dispatch(getEvent(this.state.eventCode))
+  }
+
+  handleSubmit (ev) {
+    ev.preventDefault()
+    const data = {
+      event: this.props.event._id,
+      team: this.state.team
+    }
+    this.props.dispatch(socketConnect(data))
+  }
+
+  componentWillReceiveProps (nextProps) {
+    JSON.stringify(nextProps.event) !== '{}' && this.setState({ page: 2 })
   }
 
   renderPage1 () {
     return (
       <div className='page1'>
+        <div className='err-msg'>{this.props.error.message}</div>
         <div style={{ width: 1189, height: '100%', position: 'relative', margin: 'auto' }}>
           <img alt='' className='backgroundfootballhd8' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1backgroundfootballhd8.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af6e99c994d70000c325ad3/img/page 1backgroundfootballhd8.png' />
           <img alt='' className='rectangle4' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 4.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 4.png' />
           <input
             type='submit'
-            onClick={this.handleSubmit}
-            alt=''
+            onClick={this.handleContunue}
+            value='continue'
             className='group2'
           />
           <img alt='' className='rectangle3' src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 3.png' anima-src='https://anima-uploads.s3.amazonaws.com/5af6e91783b433000c08d471/5af6e99b994d70000b8b9d26/5af704e783b433000c08d4cd/img/page 1rectangle 3.png' />
@@ -50,7 +68,14 @@ class StartPage extends Component {
   renderPage2 () {
     return (
       <div>
-        Page 2
+        <h1>Page 2</h1>
+        <form onSubmit={this.handleSubmit} name='form'>
+          <select onChange={ev => this.setState({ team: ev.target.value })}>
+            <option value='homeTeam'>{this.props.event.homeTeam}</option>
+            <option value='guestTeam'>{this.props.event.guestTeam}</option>
+          </select>
+          <input type='submit' value='join' />
+        </form>
       </div>
     )
   }
@@ -65,4 +90,11 @@ class StartPage extends Component {
   }
 }
 
-export default StartPage
+const mapStateToProps = (state) => {
+  return {
+    event: state.event,
+    error: state.error
+  }
+}
+
+export default connect(mapStateToProps)(StartPage)

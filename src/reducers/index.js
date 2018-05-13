@@ -8,8 +8,11 @@ import participants from './participants'
 import popup from './popup'
 import error from './error'
 import signup from './signup'
-import badges from './badges'
+// import badges from './badges'
 import mentions from './mentions'
+
+import event from './event'
+import minievents from './minievents'
 
 export default combineReducers({
   routerReducer,
@@ -21,6 +24,7 @@ export default combineReducers({
   popup,
   error,
   signup,
-  badges,
-  mentions
+  mentions,
+  event,
+  minievents
 })

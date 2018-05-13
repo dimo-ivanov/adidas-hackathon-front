@@ -30,15 +30,48 @@
   left: 222px;
 }
 
-.page1{width:100%;min-width:1024px;height:100vh;min-height:1024px;position:relative;overflow:hidden;margin:0;background-color:rgba(255,255,255,1.0)}
+.err-msg {
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  z-index: 2;
+  font-family: sans-serif;
+  text-align: center;
+  top: calc(100% - 290px);
+}
+
+.page1{display: flex; justify-content: center; width:100%;min-width:1024px;height:100vh;min-height:1024px;position:relative;overflow:hidden;margin:0;background-color:rgba(255,255,255,1.0)}
 a{text-decoration:none}
 div{-webkit-text-size-adjust:none}
 .page1 .backgroundfootballhd8{background-color:rgba(255,255,255,0.0);top:-14px;height:1080px;width:1920px;position:absolute;margin:0;left:-359px}
 .page1 .rectangle4{background-color:rgba(255,255,255,0.0);top:19px;height:944px;width:862px;position:absolute;margin:0;left:82px}
-.page1 .group2{background-color:rgba(255,255,255,0.0);top:789px;height:82px;width:197px;position:absolute;margin:0;left:428px}
+.page1 .group2{
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  top: 789px;
+  height: 82px;
+  width: 197px;
+  position: absolute;
+  margin: 0;
+  left: 428px;
+}
 .page1 .rectangle3{background-color:rgba(255,255,255,0.0);top:1958px;height:140px;width:951px;position:absolute;margin:0;left:37px}
 .page1 .footballspace{background-color:rgba(255,255,255,0.0);top:50px;height:59px;width:447px;position:absolute;margin:0;left:354px}
-.page1 .rectangle2{background-color:rgba(255,255,255,0.0);top:401px;height:52px;width:417px;position:absolute;margin:0;left:318px}
+.page1 .rectangle2{
+  background-color: rgba(255, 255, 255, 0.21);
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: 40px;
+  top: 401px;
+  height: 52px;
+  width: 417px;
+  position: absolute;
+  margin: 0;
+  left: 318px;
+}
 .page1 .type-the-of-the-te{background-color:rgba(255,255,255,0.0);top:240px;height:122px;width:396px;position:absolute;margin:0;left:329px}
 .page1 .check-your-location{background-color:rgba(255,255,255,0.0);top:497px;height:11px;width:142px;position:absolute;margin:0;left:447px}
 .page1 .bitmap{background-color:rgba(255,255,255,0.0);top:12px;height:125px;width:199px;position:absolute;margin:0;left:222px}
