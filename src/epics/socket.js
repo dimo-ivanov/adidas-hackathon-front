@@ -1,5 +1,6 @@
 import io from 'socket.io-client'
 import { Observable } from 'rxjs'
+import { push } from 'react-router-redux'
 import { socketTypes } from '../actions'
 import { socketUrl } from '../config/settings'
 // import { Auth } from '../helpers'
@@ -19,6 +20,7 @@ export const connectEpic = (action$) => {
         .create(obs => {
           socket = io(socketUrl, { query: action.data })
           obs.next({ type: socketTypes.SUCCESS, socket })
+          obs.next(push('/event'))
           obs.complete()
         })
         .catch(err => window.alert(err))
